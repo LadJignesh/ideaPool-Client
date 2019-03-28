@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <input type="text" id="search-bar" class="form-control" ng-model="search"
+                placeholder="Search for an idea" />
+        </div>
+        <div class="col-3">
+                <div class="form-group">
+                        <select class="form-control" id="search-bar" ng-model="search">
+                          <option value="Business Value">Business Value</option>
+                          <option value="JDE">JDE</option>
+                          <option value="Cloud">Cloud</option>
+                          <option value="Area (KM)">Area (KM)</option>
+                        </select>
+                      </div>
+            </div>
+        <div class="col-4">
+            <!-- <a href="" ng-click="removeAll()">Remove all Ideas</a> | -->
+            <button class="btn btn-success" id="ideaForm-btn" data-toggle="modal" data-target="#myModal">Submit an Idea!</button>
+        </div>
+    </div>
+    <div class="row">
+        <idea-display></idea-display>
+    </div>
+</div>
+
+
+
+<div class="modal" id="myModal">
+    <idea-form title="'New Idea'"></idea-form>
+</div>

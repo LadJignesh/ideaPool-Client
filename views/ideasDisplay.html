@@ -1,0 +1,82 @@
+<div class="col-4" ng-repeat="idea in ideas | orderBy: order | filter: search">
+    <div class="card" id="idea-card-margin">
+        <div class="card-header text-center" id="idea-card">
+            {{idea.title}}<br>
+            ( <b>{{idea.createdBy}} </b>)
+        </div>
+        <div id="ideaCardDetails" class="justify-content-center">
+            <h6 class="card-subtitle" ng-show="{{idea.area}}"><strong>Area: </strong>{{idea.area}}</h6>
+            <p class="card-text" ng-show="{{idea.ipStatus}}"><strong>Status: </strong>{{idea.ipStatus}}</p>
+            <h6 class="card-text"></h6>
+            <a href="" id="detailLink" data-toggle="modal" data-target="#ip{{idea.id}}">See Details</a>
+        </div>
+    </div>
+
+    <!-- The Modal Start -->
+    <div class="modal" id="ip{{idea.id}}">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">{{idea.title}}</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    {{idea}}
+                    <table class="table">
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Existing:</span></td>
+                            <td>{{idea.existing}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Area(KM):</span></td>
+                            <td>{{idea.area}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Category:</span></td>
+                            <td>{{idea.category}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">IP Type:</span></td>
+                            <td>{{idea.ipType}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">IP Status:</span></td>
+                            <td>{{idea.ipStatus}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Key Value Attributes:</span> </td>
+                            <td>{{idea.keyValueAttribute}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Created By:</span></td>
+                            <td>{{idea.createdBy}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Ratings:</span></td>
+                            <td>{{idea.rating}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Item Type:</span></td>
+                            <td>{{idea.itemType}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Path:</span></td>
+                            <td>{{idea.path}}</td>
+                        </tr>
+                        <tr ng-show="{{idea}}">
+                            <td><span class="title">Description:</span></td>
+                            <td>{{idea.description}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- The Modal End -->
+
+</div>

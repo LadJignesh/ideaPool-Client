@@ -1,0 +1,31 @@
+<div class="container-fluid">
+        <input type="text" id="search-bar" class="form-control" ng-model="search"
+        placeholder="Search for an idea" />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Existing</th>
+                <th>Area</th>
+                <th>Category</th>
+                <th>KeyValueAttributes</th>
+                <th>Description</th>
+                <th>CreatedBy</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="idea in ideas | orderBy: order | filter: search">
+                <td>{{idea.title}}</td>
+                <td>{{idea.existing}}</td>
+                <td>{{idea.area}}</td>
+                <td>{{idea.category}}</td>
+                <td>{{idea.keyValueAttributes}}</td>
+                <td>{{idea.description}}</td>
+                <td>{{idea.createdBy}}</td>
+                <td>
+                    <a href="" ng-show="idea.status === 'pending'" class="btn btn-danger">Pending</a>
+                    <p ng-show="idea.status === 'approved'" style="color:green">Approved</p>
+                </td>
+        </tr>
+    </table>
+</div>

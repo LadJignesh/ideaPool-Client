@@ -1,0 +1,49 @@
+body{
+    font-family: Helvetica;
+    margin: 0;
+  }
+  
+h1,h2,h3{
+  margin: 0;
+}
+
+.title{
+  font-weight: bold;
+}
+
+#idea-card{
+  min-height: 4rem;
+  font-weight: 500;
+  background-color: #295f48;
+  color: aliceblue;
+}
+
+#idea-card-margin{
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+#ideaCardDetails{
+  padding: 1rem;
+}
+
+#search-bar{
+  margin-top: 2%;
+}
+
+#ideaForm-btn{
+  margin-top: 1.3%;
+}
+
+.bg-custom{
+  background-color: #18392b;
+}
+
+a#detailLink:hover{
+  color:#18392b;
+}
+
+a#detailLink{
+  color: #295f48;
+}
+  

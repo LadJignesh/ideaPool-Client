@@ -1,0 +1,58 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="container">
+                <h4>Idea Submission Form</h4>
+                <form ng-submit="addIdea()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.title"
+                            placeholder="Title of the Idea" />
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Is idea Existing:</label>
+                        <select class="form-control" ng-model="newidea.existing" ng-options="x for x in existing">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Area:</label>
+                        <select class="form-control" ng-model="newidea.area" ng-options="x for x in areas">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.category" placeholder="Category" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.ipType" placeholder="IP Type" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.ipStatus" placeholder="IP Status" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.keyValueAttribute"
+                            placeholder="Key Value Attributes" />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control" rows="5" ng-model="newidea.description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.createdBy" placeholder="Created By" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.rating" placeholder="Rating" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.itemType" placeholder="Item Type" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newidea.path" placeholder="Item Path" />
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Submit new idea!" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
